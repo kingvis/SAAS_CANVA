@@ -1,0 +1,26 @@
+NEXT_PUBLIC_SERVER_URL=http://localhost:3010
+
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_your_clerk_publishable_key_here
+CLERK_SECRET_KEY=sk_test_your_clerk_secret_key_here
+
+# MongoDB Database
+MONGODB_URL=mongodb+srv://username:password@cluster.mongodb.net/database_name?retryWrites=true&w=majority
+
+# Cloudinary Configuration
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_actual_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_actual_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_actual_cloudinary_api_secret
+NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET=jsm_imaginify
+
+# Stripe Configuration
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key_here
+STRIPE_WEBHOOK_SECRET=whsec_your_stripe_webhook_secret_here
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key_here
+
+# Important Notes:
+# 1. Replace all placeholder values with your actual credentials
+# 2. Do NOT use "Root" as your Cloudinary cloud name - use your actual cloud name
+# 3. Make sure there are no line breaks in the values
+# 4. Restart the server after making changes to .env.local
+# 5. The application will work with mock data if database is not available

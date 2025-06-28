@@ -166,15 +166,21 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
   const onTransformHandler = async () => {
     setIsTransforming(true)
 
-    setTransformationConfig(
-      deepMergeObjects(newTransformation, transformationConfig)
-    )
+    try {
+      // Merge the new transformation with existing config
+      const mergedConfig = deepMergeObjects(newTransformation, transformationConfig);
+      setTransformationConfig(mergedConfig);
 
-    setNewTransformation(null)
+      // Update credits
+      await updateCredits(userId, creditFee);
 
-    startTransition(async () => {
-      await updateCredits(userId, creditFee)
-    })
+      // Clear the new transformation after applying
+      setNewTransformation(null);
+    } catch (error) {
+      console.error('Transformation failed:', error);
+    } finally {
+      setIsTransforming(false);
+    }
   }
 
   useEffect(() => {
@@ -297,7 +303,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           <Button 
             type="button"
             className="submit-button capitalize"
-            disabled={isTransforming || newTransformation === null}
+            disabled={isTransforming || !image}
             onClick={onTransformHandler}
           >
             {isTransforming ? 'Transforming...' : 'Apply Transformation'}

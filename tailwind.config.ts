@@ -64,6 +64,10 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        peach: {
+          100: '#ffe5b4',
+          200: '#ffd1a9',
+        },
       },
       fontFamily: {
         IBMPlex: ["var(--font-ibm-plex)"],

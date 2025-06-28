@@ -2,6 +2,180 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes gradient-text {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient-bg {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes bubble0 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-40px) scale(1.08); }
+}
+@keyframes bubble1 {
+  0%, 100% { transform: translateX(0) scale(1); }
+  50% { transform: translateX(40px) scale(1.12) rotate(8deg); }
+}
+@keyframes bubble2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 30px) scale(1.05) rotate(-6deg); }
+}
+@keyframes bubble3 {
+  0% { transform: translateY(0) scale(1); opacity: 0.4; }
+  50% { transform: translateY(100px) scale(0.9); opacity: 0.5; }
+  100% { transform: translateY(0) scale(1); opacity: 0.4; }
+}
+
+@keyframes blob1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.08); }
+}
+@keyframes blob2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-50px, 60px) scale(1.12) rotate(8deg); }
+}
+@keyframes blob3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, 40px) scale(1.05) rotate(-6deg); }
+}
+
+@keyframes wave-move {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-40px); }
+}
+@keyframes wave-move-reverse {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(40px); }
+}
+
+/* Animation Classes */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-gradient-text {
+  background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: gradient-text 3s ease infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-gradient-bg {
+  background-size: 200% 200%;
+  animation: gradient-bg 8s ease-in-out infinite;
+}
+
+.animate-bubble0 {
+  animation: bubble0 22s ease-in-out infinite;
+}
+.animate-bubble1 {
+  animation: bubble1 26s ease-in-out infinite;
+}
+.animate-bubble2 {
+  animation: bubble2 24s ease-in-out infinite;
+}
+.animate-bubble3 {
+  animation: bubble3 18s ease-in-out infinite;
+}
+
+.animate-blob1 {
+  animation: blob1 18s ease-in-out infinite;
+}
+.animate-blob2 {
+  animation: blob2 22s ease-in-out infinite;
+}
+.animate-blob3 {
+  animation: blob3 20s ease-in-out infinite;
+}
+
+.animate-wave-move {
+  animation: wave-move 18s ease-in-out infinite;
+}
+.animate-wave-move-reverse {
+  animation: wave-move-reverse 22s ease-in-out infinite;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -33,6 +207,12 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --accent-gradient: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    --accent-strong: #624cf5;
+    --accent-soft: #a18cd1;
+    --accent-pink: #fbc2eb;
+    --accent-teal: #43e97b;
   }
 
   .dark {
@@ -72,6 +252,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 50%, #43e97b 100%);
+    background-size: 200% 200%;
+    animation: gradient-move 16s ease-in-out infinite;
   }
 }
 
@@ -373,4 +556,43 @@
   font-size: 16px;
   font-weight: 600;
   color: #384262;
+}
+
+/* Fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+@keyframes blob-morph1 {
+  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
+  25% { transform: scale(1.08) translate(30px, -20px) rotate(3deg); }
+  50% { transform: scale(0.97) translate(10px, 20px) rotate(-2deg); }
+  75% { transform: scale(1.04) translate(-20px, 10px) rotate(2deg); }
+}
+@keyframes blob-morph2 {
+  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
+  25% { transform: scale(1.1) translate(-40px, 30px) rotate(-4deg); }
+  50% { transform: scale(0.95) translate(-20px, -10px) rotate(2deg); }
+  75% { transform: scale(1.05) translate(20px, 20px) rotate(-2deg); }
+}
+@keyframes blob-morph3 {
+  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
+  25% { transform: scale(1.07) translate(10px, 30px) rotate(2deg); }
+  50% { transform: scale(0.98) translate(-10px, -20px) rotate(-3deg); }
+  75% { transform: scale(1.03) translate(20px, 10px) rotate(1deg); }
+}
+
+.animate-blob-morph1 {
+  animation: blob-morph1 18s ease-in-out infinite;
+}
+.animate-blob-morph2 {
+  animation: blob-morph2 22s ease-in-out infinite;
+}
+.animate-blob-morph3 {
+  animation: blob-morph3 20s ease-in-out infinite;
 }

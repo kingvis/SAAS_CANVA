@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 
@@ -10,7 +10,7 @@ import AnimatedWavesBackground from '@/components/shared/AnimatedWavesBackground
 
 const Profile = async ({ searchParams }: SearchParamProps) => {
   const page = Number(searchParams?.page) || 1;
-  const { userId } = auth();
+  const { userId } = await auth();
 
   if (!userId) redirect("/sign-in");
 
@@ -44,7 +44,7 @@ const Profile = async ({ searchParams }: SearchParamProps) => {
     <>
       <AnimatedWavesBackground />
       <div className="relative z-10 animate-fadeInUp">
-        <Header 
+        <Header
           title="Profile"
           subtitle="Your creative dashboard"
           titleClassName="bg-gradient-to-r from-[#43e97b] via-[#a18cd1] to-[#624cf5] bg-clip-text text-transparent font-bold"

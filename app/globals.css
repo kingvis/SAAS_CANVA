@@ -4,10 +4,13 @@
 
 /* Custom Animations */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0.3;
   }
+
   50% {
     transform: translateY(-20px) rotate(180deg);
     opacity: 0.8;
@@ -15,18 +18,24 @@
 }
 
 @keyframes gradient {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
 }
 
 @keyframes gradient-text {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
@@ -36,6 +45,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -45,6 +55,7 @@
   0% {
     background-position: -200px 0;
   }
+
   100% {
     background-position: calc(200px + 100%) 0;
   }
@@ -55,6 +66,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -62,52 +74,128 @@
 }
 
 @keyframes gradient-bg {
-  0%, 100% {
+
+  0%,
+  100% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
 }
 
 @keyframes bubble0 {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-40px) scale(1.08); }
+
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-40px) scale(1.08);
+  }
 }
+
 @keyframes bubble1 {
-  0%, 100% { transform: translateX(0) scale(1); }
-  50% { transform: translateX(40px) scale(1.12) rotate(8deg); }
+
+  0%,
+  100% {
+    transform: translateX(0) scale(1);
+  }
+
+  50% {
+    transform: translateX(40px) scale(1.12) rotate(8deg);
+  }
 }
+
 @keyframes bubble2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, 30px) scale(1.05) rotate(-6deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-30px, 30px) scale(1.05) rotate(-6deg);
+  }
 }
+
 @keyframes bubble3 {
-  0% { transform: translateY(0) scale(1); opacity: 0.4; }
-  50% { transform: translateY(100px) scale(0.9); opacity: 0.5; }
-  100% { transform: translateY(0) scale(1); opacity: 0.4; }
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(100px) scale(0.9);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
 }
 
 @keyframes blob1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -30px) scale(1.08); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
 }
+
 @keyframes blob2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-50px, 60px) scale(1.12) rotate(8deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-50px, 60px) scale(1.12) rotate(8deg);
+  }
 }
+
 @keyframes blob3 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, 40px) scale(1.05) rotate(-6deg); }
+
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, 40px) scale(1.05) rotate(-6deg);
+  }
 }
 
 @keyframes wave-move {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(-40px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-40px);
+  }
 }
+
 @keyframes wave-move-reverse {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(40px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(40px);
+  }
 }
 
 /* Animation Classes */
@@ -132,7 +220,7 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   background-size: 200px 100%;
   animation: shimmer 2s infinite;
 }
@@ -149,12 +237,15 @@
 .animate-bubble0 {
   animation: bubble0 22s ease-in-out infinite;
 }
+
 .animate-bubble1 {
   animation: bubble1 26s ease-in-out infinite;
 }
+
 .animate-bubble2 {
   animation: bubble2 24s ease-in-out infinite;
 }
+
 .animate-bubble3 {
   animation: bubble3 18s ease-in-out infinite;
 }
@@ -162,9 +253,11 @@
 .animate-blob1 {
   animation: blob1 18s ease-in-out infinite;
 }
+
 .animate-blob2 {
   animation: blob2 22s ease-in-out infinite;
 }
+
 .animate-blob3 {
   animation: blob3 20s ease-in-out infinite;
 }
@@ -172,6 +265,7 @@
 .animate-wave-move {
   animation: wave-move 18s ease-in-out infinite;
 }
+
 .animate-wave-move-reverse {
   animation: wave-move-reverse 22s ease-in-out infinite;
 }
@@ -250,16 +344,29 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(120deg, #a18cd1 0%, #fbc2eb 50%, #43e97b 100%);
-    background-size: 200% 200%;
-    animation: gradient-move 16s ease-in-out infinite;
+    background: linear-gradient(135deg, #FAFCFB 0%, #B9F0F9 100%);
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
 
 .auth {
-  @apply flex-center min-h-screen w-full bg-purple-100
+  @apply flex-center min-h-screen w-full bg-brand-100;
 }
 
 .root {
@@ -272,13 +379,14 @@
 
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
+
   /* ===== UTILITIES */
   .wrapper {
     @apply max-w-5xl mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
   }
 
   .gradient-text {
-    @apply bg-purple-gradient bg-cover bg-clip-text text-transparent;
+    @apply bg-brand-500 bg-cover bg-clip-text text-transparent;
   }
 
   /* ===== ALIGNMENTS */
@@ -358,11 +466,11 @@
   }
 
   .dropdown-item {
-    @apply p-16-semibold text-dark-700 cursor-pointer transition-all px-4 py-3 rounded-none outline-none hover:border-none focus-visible:ring-transparent hover:text-white hover:bg-purple-gradient hover:bg-cover focus-visible:ring-offset-0 focus-visible:outline-none !important;
+    @apply p-16-semibold text-dark-700 cursor-pointer transition-all px-4 py-3 rounded-none outline-none hover:border-none focus-visible:ring-transparent hover:text-white hover:bg-brand-500 hover:bg-cover focus-visible:ring-offset-0 focus-visible:outline-none !important;
   }
 
   .input-field {
-    @apply rounded-[16px] border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
+    @apply rounded-[16px] border-2 border-brand-200/20 shadow-sm shadow-brand-200/20 text-dark-600 disabled:opacity-100 p-16-semibold h-[50px] md:h-[54px] focus-visible:ring-offset-0 px-4 py-3 focus-visible:ring-transparent !important;
   }
 
   .search-field {
@@ -370,19 +478,19 @@
   }
 
   .submit-button {
-    @apply bg-purple-gradient bg-cover rounded-full py-4 px-6 p-16-semibold h-[50px] w-full md:h-[54px];
+    @apply bg-brand-400 hover:bg-brand-500 transition-colors text-white rounded-full py-4 px-6 p-16-semibold h-[50px] w-full md:h-[54px];
   }
 
   .select-field {
-    @apply w-full border-2 border-purple-200/20 shadow-sm shadow-purple-200/15 rounded-[16px] h-[50px] md:h-[54px] text-dark-600 p-16-semibold disabled:opacity-100 placeholder:text-dark-400/50 px-4 py-3 focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
+    @apply w-full border-2 border-brand-200/20 shadow-sm shadow-brand-200/20 rounded-[16px] h-[50px] md:h-[54px] text-dark-600 p-16-semibold disabled:opacity-100 placeholder:text-dark-400/50 px-4 py-3 focus:ring-offset-0 focus-visible:ring-transparent focus:ring-transparent focus-visible:ring-0 focus-visible:outline-none !important;
   }
 
   .select-trigger {
-    @apply flex items-center  gap-2 py-5 capitalize focus-visible:outline-none;
+    @apply flex items-center gap-2 py-5 capitalize focus-visible:outline-none;
   }
 
   .select-item {
-    @apply py-3 cursor-pointer hover:bg-purple-100;
+    @apply py-3 cursor-pointer hover:bg-brand-100 
   }
 
   .IconButton {
@@ -403,11 +511,33 @@
 
   /* Home Page */
   .home {
-    @apply sm:flex-center hidden h-72 flex-col gap-4 rounded-[20px] border bg-banner bg-cover bg-no-repeat p-10 shadow-inner;
+    @apply sm:flex-center hidden h-72 flex-col gap-6 rounded-[32px] border-4 border-brand-200/50 p-10 shadow-2xl relative overflow-hidden;
+    background: linear-gradient(120deg, rgba(250, 252, 251, 0.8) 0%, rgba(185, 240, 249, 0.4) 100%);
+    backdrop-filter: blur(10px);
+  }
+
+  .home::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.45) 0%, transparent 50%),
+      radial-gradient(circle at 85% 30%, rgba(255, 230, 250, 0.4) 0%, transparent 40%),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    z-index: 0;
+    animation: spin-slow 120s linear infinite;
+  }
+
+  .home>* {
+    z-index: 1;
+    position: relative;
   }
 
   .home-heading {
-    @apply h1-semibold max-w-[500px] flex-wrap text-center text-white shadow-sm;
+    @apply h1-semibold max-w-[500px] flex-wrap text-center tracking-tight;
   }
 
   /* Credits Page */
@@ -416,11 +546,11 @@
   }
 
   .credits-item {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-8 shadow-xl shadow-purple-200/20 lg:max-w-none;
+    @apply w-full rounded-[16px] border-2 border-brand-200/20 bg-white p-8 shadow-xl shadow-brand-200/20 lg:max-w-none;
   }
 
   .credits-btn {
-    @apply w-full rounded-full bg-purple-100 bg-cover text-purple-500 hover:text-purple-500;
+    @apply w-full rounded-full bg-brand-100 bg-cover text-brand-500 hover:text-brand-500 
   }
 
   /* Profile Page */
@@ -429,11 +559,11 @@
   }
 
   .profile-balance {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
+    @apply w-full rounded-[16px] border-2 border-brand-200/20 bg-white p-5 shadow-lg shadow-brand-200/20 md:px-6 md:py-8;
   }
 
   .profile-image-manipulation {
-    @apply w-full rounded-[16px] border-2 border-purple-200/20 bg-white p-5 shadow-lg shadow-purple-200/10 md:px-6 md:py-8;
+    @apply w-full rounded-[16px] border-2 border-brand-200/20 bg-white p-5 shadow-lg shadow-brand-200/20 md:px-6 md:py-8;
   }
 
   /* Transformation Details */
@@ -442,7 +572,7 @@
   }
 
   .transformation-original_image {
-    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
+    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-brand-200/20 object-cover p-2;
   }
 
   /* Collection Component */
@@ -459,29 +589,29 @@
   }
 
   .collection-btn {
-    @apply button w-32 bg-purple-gradient bg-cover text-white;
+    @apply button w-32 bg-brand-500 bg-cover text-white;
   }
 
   .collection-card {
-    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-purple-200/15 bg-white p-4 shadow-xl shadow-purple-200/10 transition-all hover:shadow-purple-200/20;
+    @apply flex flex-1 cursor-pointer flex-col gap-5 rounded-[16px] border-2 border-brand-200/20 bg-white p-4 shadow-xl shadow-brand-200/20 transition-all hover:shadow-brand-200/20;
   }
 
   /* MediaUploader Component */
   .media-uploader_cldImage {
-    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
+    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-brand-200/20 object-cover p-2;
   }
 
   .media-uploader_cta {
-    @apply flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-[16px] border border-dashed bg-purple-100/20 shadow-inner;
+    @apply flex-center flex h-72 cursor-pointer flex-col gap-5 rounded-[16px] border border-dashed bg-brand-200/20 shadow-inner;
   }
 
   .media-uploader_cta-image {
-    @apply rounded-[16px] bg-white  p-5 shadow-sm shadow-purple-200/50;
+    @apply rounded-[16px] bg-white p-5 shadow-sm shadow-brand-200/20;
   }
 
   /* Navbar Component */
   .header {
-    @apply flex-between fixed h-16 w-full border-b-4 border-purple-100 bg-white p-5 lg:hidden;
+    @apply flex-between fixed h-16 w-full border-b-4 border-brand-200 bg-white p-5 lg:hidden;
   }
 
   .header-nav_elements {
@@ -490,12 +620,12 @@
 
   /* Search Component */
   .search {
-    @apply flex w-full rounded-[16px] border-2 border-purple-200/20 bg-white px-4 shadow-sm shadow-purple-200/15 md:max-w-96;
+    @apply flex w-full rounded-[16px] border-2 border-brand-200/20 bg-white px-4 shadow-sm shadow-brand-200/20 md:max-w-96;
   }
 
   /* Sidebar Component */
   .sidebar {
-    @apply hidden h-screen w-72 bg-white p-5 shadow-md shadow-purple-200/50 lg:flex;
+    @apply hidden h-screen w-72 bg-brand-100 p-5 shadow-md shadow-brand-200/30 lg:flex;
   }
 
   .sidebar-logo {
@@ -511,7 +641,7 @@
   }
 
   .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover transition-all hover:bg-brand-100 hover:shadow-inner;
   }
 
   .sidebar-link {
@@ -533,7 +663,7 @@
   }
 
   .transformed-image {
-    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
+    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-brand-200/20 object-cover p-2;
   }
 
   .transforming-loader {
@@ -541,7 +671,7 @@
   }
 
   .transformed-placeholder {
-    @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] border border-dashed bg-purple-100/20 shadow-inner;
+    @apply flex-center p-14-medium h-full min-h-72 flex-col gap-5 rounded-[16px] border border-dashed bg-brand-200/20 shadow-inner;
   }
 }
 
@@ -560,8 +690,15 @@
 
 /* Fade-in and slide-up animation */
 @keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fadeInUp {
@@ -569,30 +706,73 @@
 }
 
 @keyframes blob-morph1 {
-  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
-  25% { transform: scale(1.08) translate(30px, -20px) rotate(3deg); }
-  50% { transform: scale(0.97) translate(10px, 20px) rotate(-2deg); }
-  75% { transform: scale(1.04) translate(-20px, 10px) rotate(2deg); }
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.08) translate(30px, -20px) rotate(3deg);
+  }
+
+  50% {
+    transform: scale(0.97) translate(10px, 20px) rotate(-2deg);
+  }
+
+  75% {
+    transform: scale(1.04) translate(-20px, 10px) rotate(2deg);
+  }
 }
+
 @keyframes blob-morph2 {
-  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
-  25% { transform: scale(1.1) translate(-40px, 30px) rotate(-4deg); }
-  50% { transform: scale(0.95) translate(-20px, -10px) rotate(2deg); }
-  75% { transform: scale(1.05) translate(20px, 20px) rotate(-2deg); }
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.1) translate(-40px, 30px) rotate(-4deg);
+  }
+
+  50% {
+    transform: scale(0.95) translate(-20px, -10px) rotate(2deg);
+  }
+
+  75% {
+    transform: scale(1.05) translate(20px, 20px) rotate(-2deg);
+  }
 }
+
 @keyframes blob-morph3 {
-  0%, 100% { transform: scale(1) translate(0, 0) rotate(0deg); }
-  25% { transform: scale(1.07) translate(10px, 30px) rotate(2deg); }
-  50% { transform: scale(0.98) translate(-10px, -20px) rotate(-3deg); }
-  75% { transform: scale(1.03) translate(20px, 10px) rotate(1deg); }
+
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.07) translate(10px, 30px) rotate(2deg);
+  }
+
+  50% {
+    transform: scale(0.98) translate(-10px, -20px) rotate(-3deg);
+  }
+
+  75% {
+    transform: scale(1.03) translate(20px, 10px) rotate(1deg);
+  }
 }
 
 .animate-blob-morph1 {
   animation: blob-morph1 18s ease-in-out infinite;
 }
+
 .animate-blob-morph2 {
   animation: blob-morph2 22s ease-in-out infinite;
 }
+
 .animate-blob-morph3 {
   animation: blob-morph3 20s ease-in-out infinite;
 }

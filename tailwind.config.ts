@@ -68,6 +68,13 @@ module.exports = {
           100: '#ffe5b4',
           200: '#ffd1a9',
         },
+        brand: {
+          100: "#FAFCFB",
+          200: "#B9F0F9",
+          300: "#78AEC6",
+          400: "#0379C7",
+          500: "#2A6D99",
+        },
       },
       fontFamily: {
         IBMPlex: ["var(--font-ibm-plex)"],
